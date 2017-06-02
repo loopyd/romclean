@@ -2,7 +2,7 @@ Param(
    [Parameter(Mandatory=$true)]
    [string]$FolderPath
 ) #end param
-Write-Host --NoNewline "Initializing to fix filenames ..." -ForegroundColor Cyan
+Write-Host -NoNewline "Initializing to fix filenames ..." -ForegroundColor Cyan
 $ScriptPath = Split-Path $MyInvocation.MyCommand.Path
 Push-Location $ScriptPath
 Unblock-File -Path "$ScriptPath\fixnames.ps1"
