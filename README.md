@@ -1,5 +1,8 @@
 # romclean
+## For Windows 
 A tool to clean up GoodRoms directories for RetroPie!
+
+-----
 
 ***Usage:***
 
@@ -23,13 +26,21 @@ A tool to clean up GoodRoms directories for RetroPie!
     - The tool gets rid of interlaced and headered duplicate ROMs, designed to maximize the space available to your RetroPie.
 
 -----
+
 ***LIMITS:***
 
     - The regions are umbrella presets of the major continental areas.  If you would like params or further scripting
       capabilities for specific region blacklisting, send a REQUEST*.
+
 -----
 
-CHANGELOG:
+***NOTES:***
+
+   You need Microsoft Powershell >1.0 to use this tool.
+
+-----
+
+***CHANGELOG:***
 
      1.0.0:
          First release.  Tool works.  (Aaaah hope!~)
@@ -41,5 +52,9 @@ CHANGELOG:
 Please contact me with bug reports or feture requests at:
 
 loopyd@lupinedream.com
+
+or on Discord as:
+
+LupineDream
 
 -----
