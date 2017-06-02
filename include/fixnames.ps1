@@ -14,11 +14,11 @@ Start-Sleep -s 3
 foreach ($item in $items) {
     $NewName = & "$ScriptPath\Remove-InvalidFileNameChars.ps1" -Name $item.Name
 	$NewName = $($NewName -replace "(!|\||\[|\]|`#)","")
-    ## $item | Rename-Item -NewName $NewName
 	$bytes =[system.Text.Encoding]::UTF8.GetBytes($NewName)
 	$NewName = [System.Text.Encoding]::ASCII.GetString($bytes)
-	$OUT = "$($NewName) proccesed".PadRight(65,"_")
-	Write-Host -NoNewline "`r $($OUT) processed" -ForegroundColor Green
+    $item | Rename-Item -NewName $NewName
+	$OUT = "$($NewName) proccesed".PadRight(79,"_")
+	Write-Host -NoNewline "`r $($OUT)" -ForegroundColor Green
 }
 Pop-Location
 Start-Sleep -s 3
