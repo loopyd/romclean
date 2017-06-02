@@ -56,13 +56,13 @@ echo STEP 1
 echo(
 echo   Region filtering...
 echo(
-echo STEP 1
-echo(
-call %SYSTEMROOT%\System32\WindowsPowerShell\v1.0\powershell -NoProfile -ExecutionPolicy Unrestricted -File ""%~dp0include\fixnames.ps1"" -FolderPath ""!path!""
 if "!M!" == "1" call .\bin\clean-us.cmd "!path!"
 if "!M!" == "2" call .\bin\clean-eu.cmd "!path!"
 if "!M!" == "3" call .\bin\clean-jp.cmd "!path!"
 echo(
+echo STEP 2
+echo(
+call %SYSTEMROOT%\System32\WindowsPowerShell\v1.0\powershell -NoProfile -ExecutionPolicy Unrestricted -File ""%~dp0include\fixnames.ps1"" -FolderPath ""!path!""
 echo FINISHED!
 pause
 cls
